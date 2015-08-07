@@ -9,7 +9,37 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var resultDisplay: UILabel!
+    
+    
+    @IBAction func appendDigit(sender: UIButton)
+    {
+        
+    }
+    
+    @IBAction func appendDigitWithEvent(sender: UIButton, forEvent event: UIEvent) {
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
