@@ -10,16 +10,28 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var resultDisplay: UILabel!
-    
+    @IBOutlet weak var resultsLabel: UILabel!
+    var userIsInTheMiddleOfTypingANumber: Bool = false
     
     @IBAction func appendDigit(sender: UIButton)
     {
-        
+        let digit = sender.currentTitle!
+        println("Digit= \(digit)")
+        //constantString += sender.titleLabel?.text as String
+        if (userIsInTheMiddleOfTypingANumber)
+        {
+            resultsLabel.text = resultsLabel.text! + digit
+            userIsInTheMiddleOfTypingANumber = true
+        }
+        else
+        {
+            resultsLabel.text = digit
+            userIsInTheMiddleOfTypingANumber = true
+        }
     }
     
-    @IBAction func appendDigitWithEvent(sender: UIButton, forEvent event: UIEvent) {
-    }
+    //@IBAction func appendDigitWithEvent(sender: UIButton, forEvent event: UIEvent) {
+    //}
     
     
     
